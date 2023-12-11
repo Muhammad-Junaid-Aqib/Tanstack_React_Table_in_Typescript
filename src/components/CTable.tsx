@@ -4,6 +4,7 @@ import { ColumnDef, useReactTable, getCoreRowModel, flexRender, getFilteredRowMo
 import Filter from './Filter'
 import item from '../Data/data.json'
 import { SwapVert, Circle } from '@mui/icons-material';
+import { styled } from '@mui/material/styles';
 
 import {
   Box,
@@ -21,30 +22,6 @@ import {
   Chip
 } from "@mui/material";
 
-import { styled } from '@mui/material/styles';
-
-// function IndeterminateCheckbox({
-//   indeterminate,
-//   className = '',
-//   ...rest
-// }: { indeterminate?: boolean } & HTMLProps<HTMLInputElement>) {
-//   const ref = useRef<HTMLInputElement>(null!)
-
-//   useEffect(() => {
-//     if (typeof indeterminate === 'boolean') {
-//       ref.current.indeterminate = !rest.checked && indeterminate
-//     }
-//   }, [ref, indeterminate])
-
-//   return (
-//     <input
-//       type="checkbox"
-//       ref={ref}
-//       className={className + ' cursor-pointer'}
-//       {...rest}
-//     />
-//   )
-// }
 
 type Person = {
   firstName: string
@@ -55,7 +32,6 @@ type Person = {
   status: 'relationship' | 'complicated' | 'single'
   subRows?: Person[]
 }
-
 
 const IndeterminateCheckbox = ({ indeterminate, className = '', ...rest }: { indeterminate?: boolean } & HTMLProps<HTMLInputElement>) => {
   const ref = useRef<HTMLInputElement>(null!)
@@ -90,12 +66,6 @@ const RESIZER = styled(Box)(() => ({
   touchAction: "none",
   borderRadius: "6px",
 }));
-
-// const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-
-
-
 
 const CTable = () => {
   const columns = [
@@ -172,14 +142,11 @@ const CTable = () => {
       header: 'Action(s)',
       enableSorting: false,
       cell: (props) => <Box
-        // spacing={1}
-        // spacing="0.5rem"
         sx={{
           display: 'flex',
           alignItems: 'center',
           spacing: '10px',
           gap: 1,
-          // justifyContent: 'space-between',
         }}>
         {/* {props.getValue()} */}
         <Button variant="contained" size="small" sx={{
@@ -225,8 +192,6 @@ const CTable = () => {
     onRowSelectionChange: setRowSelection,
     enableRowSelection: true,
   })
-
-
 
   // console.log(table.getHeaderGroups())
   return (
