@@ -177,7 +177,7 @@ const CTable = () => {
   const [data, setData] = useState(item)
   const [page, setPage] = useState(item)
   const [columnFilters, setColumnFilters] = useState([])
-
+  
   const tabled = useReactTable({
     data,
     columns,
