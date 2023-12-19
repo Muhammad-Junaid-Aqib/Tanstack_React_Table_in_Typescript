@@ -22,7 +22,7 @@ const CustomTable = ({ tabled }) => {
                   border: "2px solid #f2f2f2",
                   borderRadius: "15px",
                   backgroundColor: "white",
-                  margin: "15px 0px"
+                //   margin: "15px 0px"
               }}
               component={Paper}
           >

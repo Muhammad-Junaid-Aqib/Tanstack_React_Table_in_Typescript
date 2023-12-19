@@ -227,7 +227,7 @@ const CTable = () => {
       <TableContainer
         sx={{
           border: "2px solid #f2f2f2",
-          borderRadius: "15px",
+          borderRadius: "10px",
           backgroundColor: "white",
           margin: "15px 0px"
         }}

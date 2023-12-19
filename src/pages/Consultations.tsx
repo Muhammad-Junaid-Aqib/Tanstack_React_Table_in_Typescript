@@ -23,8 +23,12 @@ import { Circle } from '@mui/icons-material';
 import {
 
 } from "@mui/material";
-import { ColumnDef, useReactTable, getCoreRowModel, getFilteredRowModel, getSortedRowModel, getPaginationRowModel } from '@tanstack/react-table'
+import {
+    ColumnDef, useReactTable, getCoreRowModel,
+    getFilteredRowModel, getSortedRowModel, getPaginationRowModel,
+} from '@tanstack/react-table'
 import DATAFROMJSON from '../Data/data.json'
+import Filter from '../components/Filter'
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
     width: '25px',
@@ -48,10 +52,13 @@ const Consultation = styled(Box)(({ theme }) => ({
 }));
 
 const SearchAndPagination = styled(Box)(({ theme }) => ({
-    // color: 'red',
-    // marginTop: '40px',
-    backgroundColor: 'lightcyan'
-}));
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: '10px',
+    height: '60px',
+    border: '2px solid #f2f2f2'
+}))
 
 type Data = {
     userId: number;
@@ -293,17 +300,47 @@ const Consultations = () => {
                 <h1>junaid</h1>
             </Box> */}
             <Box>
-                <Consultation>
+                <Consultation >
                     <h1> Consultations</h1>
                 </Consultation>
-                <SearchAndPagination>
-                    SearchAndPagination
+                <SearchAndPagination sx={{
+                    mt: 2,
+                    margin: "10px 15px",
+                }}>
+                    <Filter
+                        columnFilters={columnFilters}
+                        setColumnFilters={setColumnFilters}
+                    />
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                    }}>
+                        <Box sx={{
+                            fontSize: '15px'
+                        }}>
+                            Showing {tabled.getState().pagination.pageIndex + 1} -
+                            {tabled.getState().pagination.pageSize} of
+                            {tabled.getCanNextPage()} entries
+                        </Box>
+                        <Box>
+                            <Stack spacing={1}>
+                                <Pagination
+                                    count={tabled.getPageCount()}
+                                    color="primary"
+                                    shape="rounded"
+                                    onClick={() => tabled.nextPage()}
+                                />
+                            </Stack>
+                        </Box>
+                    </Box>
                 </SearchAndPagination>
-                <Box>
+                <Box sx={{
+                    mt: 2,
+                    margin: "10px 15px",
+                }}>
                     <CustomTable tabled={tabled} />
                 </Box>
             </Box>
-
         </>
     )
 }
