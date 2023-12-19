@@ -53,19 +53,19 @@ const IndeterminateCheckbox = ({ indeterminate, className = '', ...rest }: { ind
   )
 }
 
-const RESIZER = styled(Box)(() => ({
-  position: "relative",
-  // opacity: 0,
-  marginTop: "0px",
-  marginRight: "0px",
-  height: "100%",
-  width: "5px",
-  background: "rgb(0,123,255)",
-  cursor: "col-resize",
-  userSelect: "none",
-  touchAction: "none",
-  borderRadius: "6px",
-}));
+// const RESIZER = styled(Box)(() => ({
+//   position: "relative",
+//   // opacity: 0,
+//   marginTop: "0px",
+//   marginRight: "0px",
+//   height: "100%",
+//   width: "5px",
+//   background: "rgb(0,123,255)",
+//   cursor: "col-resize",
+//   userSelect: "none",
+//   touchAction: "none",
+//   borderRadius: "6px",
+// }));
 
 const CTable = () => {
   const columns = [
