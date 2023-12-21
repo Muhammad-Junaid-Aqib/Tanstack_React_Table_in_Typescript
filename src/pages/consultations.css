@@ -1,19 +1,19 @@
 .search_pagination {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
+    /* justify-content: space-between; */
+    /* background-color: rosybrown; */
+    /* border-radius: 10px; */
     height: 60px;
     padding: 0px 10px;
     /* margin: 0 15px; */
 }
 
-.search_box_show_page_number {
+/* .search_box_show_page_number {
     display: flex;
     align-items: center;
-    /* height: 40px; */
-}
+    height: 40px;
+} */
 
 .searchBox{
     border: 2px solid #f2f2f2;

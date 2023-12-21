@@ -38,7 +38,6 @@ const Filter = ({ columnFilters, setColumnFilters }) => {
         );
 
 
-
     const onSubmit = () => {
         console.log(columnFilters)
     }
@@ -58,40 +57,6 @@ const Filter = ({ columnFilters, setColumnFilters }) => {
                         }}>
                             <SearchIcon />
                         </SearchIconWrapper>
-                    </Box>
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        marginLeft: "2em",
-                        width: '12em',
-                        height: '40px',
-                    }}>
-                        <Box sx={{
-                            fontSize: '15px',
-                            marginRight: "10px"
-                        }}>
-                            show per page
-                        </Box>
-                        <Box>
-                            <FormControl fullWidth sx={{
-                            }} size="small"
-                            >
-                                <Select
-                                    sx={{
-                                        height: "35px",
-                                        width: '65px',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}
-                                >
-                                    <MenuItem value={10}>10</MenuItem>
-                                    <MenuItem value={20}>15</MenuItem>
-                                    <MenuItem value={30}>20</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Box>
                     </Box>
                 </Box>
             </Box>
