@@ -49,8 +49,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Consultation = styled(Box)(({ theme }) => ({
-    // color: 'red',
-    // marginTop: '40px',
+    color: 'red',
+    marginTop: '40px',
 }));
 
 const SearchAndPagination = styled(Box)(({ theme }) => ({
